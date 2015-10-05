@@ -1,0 +1,360 @@
+//
+// Base
+// --------------------------------------------------
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: $fontHiragino;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $fontColor;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// a
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline
+    }
+}
+
+.searchmatch {
+    background: $pointColor;
+}
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 0 20px;
+    background: $keyColor;
+    border-bottom: 1px solid #ddd;
+}
+
+.Header__inner {
+    display: table;
+    width: 100%;
+}
+
+.Header__log {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    font-size: 22px;
+    font-family: 'Chivo', sans-serif;
+    font-weight: normal;
+    letter-spacing: .08em;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+    padding: 6px 0;
+}
+
+.Header__react {
+    color : $pointColor;
+}
+
+.SearchForm {
+    vertical-align: middle;
+    display: table-cell;
+    width: 50%;
+    text-align: right;
+    padding: 6px 0;
+}
+
+.SearchForm__input {
+    width: 260px;
+    height: 30px;
+    padding: 0 4px;
+    border-radius : 2px 0 0 2px;
+    border : 1px solid #ddd;
+    border-right : none;
+    vertical-align: top;
+}
+
+.SearchForm__button {
+    background : $pointColor;
+    color : $keyColor;
+    border-radius : 3px;
+    width: 60px;
+    height: 30px;
+    border-radius : 0 2px 2px 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Container {
+    padding: 66px 0 20px;
+    background: #fff;
+}
+
+.Wiki__item {
+    padding: 30px 20px;
+    &:nth-child(even) {
+        background: #fafafa;
+    }
+    a {
+        display: block;
+        color: inherit;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.Wiki__article {
+    overflow: hidden;
+    width: 960px;
+    margin: 0 auto;
+    .thumb {
+        overflow: hidden;
+    }
+    .thumbinner {
+        float: left;
+    }
+    .infobox {
+        float: right;
+        float: right;
+        margin: 0 0 1em 1em;
+    }
+    .dablink {
+        margin: 0.5em 0;
+        padding: 3px 2em;
+        border-bottom: 1px solid #aaa;
+    }
+
+    .toc {
+        width: 652px;
+        background: #f9f9f9;
+        border: 1px solid #aaa;
+        padding: 7px;
+
+        h2 {
+            font-size: 13px;
+        }
+    }
+}
+
+.Wiki__desc {
+    > h2 {
+        margin: 20px 0 8px;
+        font-size: 24px;
+        font-weight: normal;
+        border-bottom: 1px solid #ccc;
+    }
+    > p {
+        margin: 10px 0;
+    }
+    > ul, ol {
+        list-style: disc;
+        margin-left: 1.5em;
+        li {
+            margin: 10px 0;
+        }
+    }
+    .tright {
+        float: right;
+        clear: right;
+        margin-left: 1em;
+        padding: 7px;
+        background: #f9f9f9;
+        border: 1px solid #aaa;
+    }
+
+    .mw-editsection {
+        display: none;
+    }
+}
+
+.Wiki__title {
+    color : $keyColor;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+#fountainG{
+    position:relative;
+    height:28px;
+    margin:20px auto;
+    text-align: center;
+}
+
+.fountainG{
+    display: inline-block;
+    vertical-align: top;
+    background-color:rgb(0,46,91);
+    width:28px;
+    height:28px;
+    animation-name:bounce_fountainG;
+        -o-animation-name:bounce_fountainG;
+        -ms-animation-name:bounce_fountainG;
+        -webkit-animation-name:bounce_fountainG;
+        -moz-animation-name:bounce_fountainG;
+    animation-duration:1.5s;
+        -o-animation-duration:1.5s;
+        -ms-animation-duration:1.5s;
+        -webkit-animation-duration:1.5s;
+        -moz-animation-duration:1.5s;
+    animation-iteration-count:infinite;
+        -o-animation-iteration-count:infinite;
+        -ms-animation-iteration-count:infinite;
+        -webkit-animation-iteration-count:infinite;
+        -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+        -o-animation-direction:normal;
+        -ms-animation-direction:normal;
+        -webkit-animation-direction:normal;
+        -moz-animation-direction:normal;
+    transform:scale(.3);
+        -o-transform:scale(.3);
+        -ms-transform:scale(.3);
+        -webkit-transform:scale(.3);
+        -moz-transform:scale(.3);
+    border-radius:19px;
+        -o-border-radius:19px;
+        -ms-border-radius:19px;
+        -webkit-border-radius:19px;
+        -moz-border-radius:19px;
+}
+
+#fountainG_1{
+    left:0;
+    animation-delay:0.6s;
+        -o-animation-delay:0.6s;
+        -ms-animation-delay:0.6s;
+        -webkit-animation-delay:0.6s;
+        -moz-animation-delay:0.6s;
+}
+
+#fountainG_2{
+    left:29px;
+    animation-delay:0.75s;
+        -o-animation-delay:0.75s;
+        -ms-animation-delay:0.75s;
+        -webkit-animation-delay:0.75s;
+        -moz-animation-delay:0.75s;
+}
+
+#fountainG_3{
+    left:58px;
+    animation-delay:0.9s;
+        -o-animation-delay:0.9s;
+        -ms-animation-delay:0.9s;
+        -webkit-animation-delay:0.9s;
+        -moz-animation-delay:0.9s;
+}
+
+#fountainG_4{
+    left:88px;
+    animation-delay:1.05s;
+        -o-animation-delay:1.05s;
+        -ms-animation-delay:1.05s;
+        -webkit-animation-delay:1.05s;
+        -moz-animation-delay:1.05s;
+}
+
+#fountainG_5{
+    left:117px;
+    animation-delay:1.2s;
+        -o-animation-delay:1.2s;
+        -ms-animation-delay:1.2s;
+        -webkit-animation-delay:1.2s;
+        -moz-animation-delay:1.2s;
+}
+
+#fountainG_6{
+    left:146px;
+    animation-delay:1.35s;
+        -o-animation-delay:1.35s;
+        -ms-animation-delay:1.35s;
+        -webkit-animation-delay:1.35s;
+        -moz-animation-delay:1.35s;
+}
+
+#fountainG_7{
+    left:175px;
+    animation-delay:1.5s;
+        -o-animation-delay:1.5s;
+        -ms-animation-delay:1.5s;
+        -webkit-animation-delay:1.5s;
+        -moz-animation-delay:1.5s;
+}
+
+#fountainG_8{
+    left:205px;
+    animation-delay:1.64s;
+        -o-animation-delay:1.64s;
+        -ms-animation-delay:1.64s;
+        -webkit-animation-delay:1.64s;
+        -moz-animation-delay:1.64s;
+}
+
+
+
+@keyframes bounce_fountainG{
+    0%{
+    transform:scale(1);
+        background-color:rgb(0,46,91);
+    }
+
+    100%{
+    transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes bounce_fountainG{
+    0%{
+    -o-transform:scale(1);
+        background-color:rgb(0,46,91);
+    }
+
+    100%{
+    -o-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes bounce_fountainG{
+    0%{
+    -ms-transform:scale(1);
+        background-color:rgb(0,46,91);
+    }
+
+    100%{
+    -ms-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes bounce_fountainG{
+    0%{
+    -webkit-transform:scale(1);
+        background-color:rgb(0,46,91);
+    }
+
+    100%{
+    -webkit-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes bounce_fountainG{
+    0%{
+    -moz-transform:scale(1);
+        background-color:rgb(0,46,91);
+    }
+
+    100%{
+    -moz-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
