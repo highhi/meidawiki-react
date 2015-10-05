@@ -30,13 +30,8 @@ export default class Items extends React.Component {
         }
     }
 
-    isNewItems() {
-
-    }
-
     render() {
-        let isEmpty = this.state.items.length === 0;
-        let items   = this.state.items.map( ( item, index ) =>{
+        let items = this.state.items.map( ( item, index ) =>{
             let encodedTitle = encodeURIComponent( item.title );
             return(
                 <section className="Wiki__item" key={ index }><Link to={ '/' + item.title } >
@@ -47,7 +42,6 @@ export default class Items extends React.Component {
         });
         return (
             <div className="Wiki">
-                { isEmpty && <Loader /> }
                 { items }
             </div>
         );

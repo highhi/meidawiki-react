@@ -1,16 +1,23 @@
 'use strict';
 
-import React      from 'react';
+import React, { PropTypes } from 'react';
 import SearchForm from '../components/SearchForm.jsx';
 import Loader     from '../components/Loader.jsx';
 import { fetchItem } from '../actions/ItemsActions';
 
-export default class App extends React.Component {
+class App extends React.Component {
+    constructor( props ) {
+        super( props );
+    }
     
     hundleSubmit( e ) {
         e.preventDefault();
         let keyword = React.findDOMNode( this.refs.keyword ).value.trim();
         fetchItem( keyword );
+
+        if ( this.props.params.pathname !== '/' ) {
+            this.props.history.pushState( null, '/' );
+        }
     }
 
     render() {
@@ -32,3 +39,5 @@ export default class App extends React.Component {
         );
     }
 }
+
+export default App;
